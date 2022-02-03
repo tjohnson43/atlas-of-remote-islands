@@ -16,7 +16,20 @@ function App() {
         <h2 className="section-title">Islands</h2>
         <ul className="cards">
           
-          <Card />
+          {data.islands.map(island => {
+              return(
+                <Card
+                name={island.name}
+                description={island.description}
+                lat={island.lat}
+                lon={island.lon}
+                img={island.image}
+                wiki={island.wiki}
+
+    
+                />
+              )
+          })}
           
         </ul>
       </div>
